@@ -150,6 +150,13 @@ function mostrarResultado() {
 
 
 function reiniciarQuiz() {
+    // Reseta as variáveis de controle
+    perguntaAtual = 0;
+    pontuacaoJogador1 = 0;
+    pontuacaoJogador2 = 0;
+    tempoInicio = 0;
+    
+    // Troca a visibilidade das telas
     trocarVisibilidade('container-resultado', 'none');
     trocarVisibilidade('container-inicial', 'flex');
     
@@ -161,8 +168,12 @@ function reiniciarQuiz() {
     // Garante a centralização do container inicial
     const containerInicial = document.getElementById('container-inicial');
     containerInicial.classList.add('flex', 'flex-col', 'items-center', 'justify-center');
+    
+    // Para resetar os elementos
+    document.getElementById('vez-jogador').textContent = '';
+    document.getElementById('pontuacao-jogador1').textContent = 'Acertos P1: 0';
+    document.getElementById('pontuacao-jogador2').textContent = 'Acertos P2: 0';
 }
-
 // Utilitários
 function trocarVisibilidade(id, display) {
     document.getElementById(id).style.display = display;
