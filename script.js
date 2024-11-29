@@ -169,11 +169,11 @@ function reiniciarQuiz() {
     const containerInicial = document.getElementById('container-inicial');
     containerInicial.classList.add('flex', 'flex-col', 'items-center', 'justify-center');
     
-    // Para resetar os elementos
-    document.getElementById('vez-jogador').textContent = '';
+    document.getElementById('vez-jogador').textContent = ''; 
     document.getElementById('pontuacao-jogador1').textContent = 'Acertos P1: 0';
     document.getElementById('pontuacao-jogador2').textContent = 'Acertos P2: 0';
 }
+
 // Utilitários
 function trocarVisibilidade(id, display) {
     document.getElementById(id).style.display = display;
